@@ -7,7 +7,7 @@ export default function Home() {
         <div className="container">
           <h1>AI has intelligence. Humans have authority.</h1>
 
-          <p style={{ marginTop: 20 }}>
+          <p style={{ marginTop: 24 }}>
             Parmana is Execution Authority Infrastructure for AI systems.
             It ensures every AI-generated action is explicitly authorized,
             deterministically evaluated, and cryptographically verified before execution.
@@ -19,9 +19,7 @@ export default function Home() {
       <section className="dark">
         <div className="container">
           <h2>System Flow</h2>
-          <p>
-            AI → Signals → Governance → Authorization Decision → Execution Runtime → Attestation
-          </p>
+          <p>AI → Signals → Governance → Authorization Decision → Execution Runtime → Attestation</p>
         </div>
       </section>
 
@@ -30,8 +28,8 @@ export default function Home() {
         <div className="container">
           <h2>The Problem</h2>
           <p>
-            AI systems are now generating real-world actions, but there is no deterministic enforcement layer
-            that validates whether those actions are authorized before execution.
+            AI systems are generating real-world actions, but there is no deterministic
+            enforcement layer that validates whether those actions are authorized before execution.
           </p>
         </div>
       </section>
@@ -76,7 +74,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
+      {/* CTA */}
       <section className="dark">
         <div className="container" style={{ textAlign: "center" }}>
           <h2>AI generates actions. Humans define authority.</h2>
