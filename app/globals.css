@@ -1,7 +1,7 @@
 :root {
   --bg: #ffffff;
   --text: #0a0a0a;
-  --muted: #6b6b6b;
+  --muted: #666;
   --border: #eaeaea;
 }
 
@@ -9,70 +9,87 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI;
-  -webkit-font-smoothing: antialiased;
+  font-family: ui-sans-serif, system-ui;
 }
 
-/* layout system */
+/* container */
 .container {
-  max-width: 1080px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
-/* spacing system */
+/* sections */
 section {
-  padding: 140px 0;
+  padding: 100px 20px;
 }
 
-/* typography system */
+/* typography */
 h1 {
-  font-size: 64px;
+  font-size: clamp(36px, 6vw, 64px);
   line-height: 1.05;
-  letter-spacing: -1.5px;
-  font-weight: 750;
+  letter-spacing: -1px;
 }
 
 h2 {
-  font-size: 36px;
-  font-weight: 650;
-  margin-bottom: 24px;
+  font-size: clamp(26px, 4vw, 36px);
+  margin-bottom: 20px;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.75;
+  font-size: 16px;
+  line-height: 1.7;
   color: var(--muted);
-  max-width: 760px;
+  max-width: 720px;
 }
 
-/* card system */
-.card {
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 24px;
-  background: #fff;
-}
-
-/* grids */
+/* grids (RESPONSIVE CORE) */
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 
-/* dark section */
-.dark {
-  background: #000;
-  color: #fff;
+/* cards */
+.card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  background: white;
 }
 
-.dark p {
-  color: #bdbdbd;
+/* NAV RESPONSIVE */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+  section {
+    padding: 70px 16px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
 }

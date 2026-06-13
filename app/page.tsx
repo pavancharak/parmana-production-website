@@ -6,34 +6,39 @@ export default function Home() {
       <div style={{
         position: "sticky",
         top: 0,
-        background: "rgba(255,255,255,0.85)",
+        background: "rgba(255,255,255,0.9)",
         backdropFilter: "blur(10px)",
         borderBottom: "1px solid #eee",
-        padding: "16px 24px",
+        padding: "16px 20px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        flexWrap: "wrap",
         zIndex: 50
       }}>
         <strong>Parmana Systems</strong>
+
         <a
-  href="https://docs.manthan.systems"
-  target="_blank"
-  style={{
-    textDecoration: "none",
-    color: "#555",
-    fontWeight: 500,
-    cursor: "pointer"
-  }}
->
-  Docs
-</a>
+          href="https://docs.manthan.systems"
+          target="_blank"
+          style={{
+            textDecoration: "none",
+            color: "#555",
+            fontWeight: 500
+          }}
+        >
+          Docs
+        </a>
       </div>
 
       {/* HERO */}
-      <section style={{ padding: "120px 24px", maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{
+        padding: "96px 20px",
+        maxWidth: 1100,
+        margin: "0 auto"
+      }}>
         <h1 style={{
-          fontSize: 64,
+          fontSize: "clamp(36px, 6vw, 64px)",
           lineHeight: 1.05,
           letterSpacing: "-1.5px",
           fontWeight: 750
@@ -41,7 +46,13 @@ export default function Home() {
           AI has intelligence. Humans have authority.
         </h1>
 
-        <p style={{ marginTop: 24, fontSize: 18, maxWidth: 760, color: "#555" }}>
+        <p style={{
+          marginTop: 24,
+          fontSize: 18,
+          maxWidth: 760,
+          color: "#555",
+          lineHeight: 1.6
+        }}>
           Parmana is Execution Authority Infrastructure for AI systems.
           It ensures every AI-generated action is explicitly authorized,
           deterministically evaluated, and cryptographically verified before execution.
@@ -49,9 +60,18 @@ export default function Home() {
       </section>
 
       {/* SYSTEM FLOW */}
-      <section style={{ background: "#000", color: "#fff", padding: "120px 24px" }}>
+      <section style={{
+        background: "#000",
+        color: "#fff",
+        padding: "96px 20px"
+      }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <h2 style={{ fontSize: 36 }}>System Flow</h2>
+          <h2 style={{
+            fontSize: "clamp(24px, 3vw, 36px)"
+          }}>
+            System Flow
+          </h2>
+
           <p style={{ color: "#bbb", marginTop: 16 }}>
             AI → Signals → Governance → Authorization Decision → Execution Runtime → Attestation
           </p>
@@ -59,8 +79,15 @@ export default function Home() {
       </section>
 
       {/* PROBLEM */}
-      <section style={{ padding: "120px 24px", maxWidth: 1100, margin: "0 auto" }}>
-        <h2 style={{ fontSize: 36 }}>The Problem</h2>
+      <section style={{
+        padding: "96px 20px",
+        maxWidth: 1100,
+        margin: "0 auto"
+      }}>
+        <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)" }}>
+          The Problem
+        </h2>
+
         <p style={{ marginTop: 16, fontSize: 18, color: "#555" }}>
           AI systems are generating real-world actions, but there is no deterministic enforcement layer
           that validates whether those actions are authorized before execution.
@@ -68,13 +95,18 @@ export default function Home() {
       </section>
 
       {/* SOLUTION */}
-      <section style={{ background: "#fafafa", padding: "120px 24px" }}>
+      <section style={{
+        background: "#fafafa",
+        padding: "96px 20px"
+      }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <h2 style={{ fontSize: 36 }}>The Solution</h2>
+          <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)" }}>
+            The Solution
+          </h2>
 
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
+            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
             gap: 20,
             marginTop: 30
           }}>
@@ -87,8 +119,9 @@ export default function Home() {
               <div key={i} style={{
                 border: "1px solid #eaeaea",
                 borderRadius: 14,
-                padding: 24,
-                background: "#fff"
+                padding: 20,
+                background: "#fff",
+                transition: "0.2s ease",
               }}>
                 {t}
               </div>
@@ -98,12 +131,18 @@ export default function Home() {
       </section>
 
       {/* USE CASES */}
-      <section style={{ padding: "120px 24px", maxWidth: 1100, margin: "0 auto" }}>
-        <h2 style={{ fontSize: 36 }}>Use Cases</h2>
+      <section style={{
+        padding: "96px 20px",
+        maxWidth: 1100,
+        margin: "0 auto"
+      }}>
+        <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)" }}>
+          Use Cases
+        </h2>
 
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
           gap: 20,
           marginTop: 30
         }}>
@@ -124,29 +163,32 @@ export default function Home() {
       </section>
 
       {/* LIVE DEMO */}
-      <section style={{ padding: "120px 24px", background: "#fafafa" }}>
+      <section style={{
+        padding: "96px 20px",
+        background: "#fafafa"
+      }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-
-          <h2 style={{ fontSize: 36 }}>Live Execution Demo</h2>
+          <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)" }}>
+            Live Execution Demo
+          </h2>
 
           <div style={{
             marginTop: 30,
             border: "1px solid #eaeaea",
             borderRadius: 14,
-            padding: 24,
+            padding: 20,
             background: "#fff",
             fontFamily: "monospace",
             fontSize: 14,
-            lineHeight: 1.8
+            lineHeight: 1.8,
+            overflowX: "auto"
           }}>
-
             <div>AI REQUEST → Transfer $10,000 to Vendor A</div>
             <div>SIGNAL GENERATED → Sent to Parmana</div>
             <div style={{ color: "#b45309" }}>AUTHORIZATION → Evaluating policy rules...</div>
             <div style={{ color: "#2563eb" }}>DECISION → APPROVED</div>
             <div style={{ color: "#16a34a" }}>EXECUTION → COMPLETED</div>
-            <div style={{ color: "#6b7280" }}>ATTESTATION → 0x9f3a...c21 (verifiable proof)</div>
-
+            <div style={{ color: "#6b7280" }}>ATTESTATION → 0x9f3a...c21</div>
           </div>
         </div>
       </section>
@@ -156,11 +198,12 @@ export default function Home() {
         background: "#000",
         color: "#fff",
         textAlign: "center",
-        padding: "120px 24px"
+        padding: "96px 20px"
       }}>
-        <h2 style={{ fontSize: 36 }}>
+        <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)" }}>
           AI generates actions. Humans define authority.
         </h2>
+
         <p style={{ marginTop: 16, color: "#aaa" }}>
           Parmana enforces it.
         </p>
