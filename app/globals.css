@@ -1,8 +1,9 @@
 :root {
   --bg: #ffffff;
   --text: #0a0a0a;
-  --muted: #666;
-  --border: #e5e5e5;
+  --muted: #5a5a5a;
+  --border: #eaeaea;
+  --accent: #000;
 }
 
 body {
@@ -12,29 +13,67 @@ body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI;
 }
 
-section {
-  padding: 96px 24px;
-}
-
+/* Layout system */
 .container {
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
+/* Section spacing system (VERY IMPORTANT) */
+section {
+  padding: 120px 0;
+}
+
+/* Typography hierarchy */
 h1 {
-  font-size: 56px;
-  font-weight: 700;
-  letter-spacing: -1px;
+  font-size: 60px;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  font-weight: 750;
 }
 
 h2 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 24px;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 650;
+  margin-bottom: 20px;
 }
 
 p {
-  color: var(--muted);
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 720px;
+}
+
+/* Card system */
+.card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  background: white;
+}
+
+/* Grid system */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Dark section */
+.dark {
+  background: #000;
+  color: #fff;
+}
+
+.dark p {
+  color: #b3b3b3;
 }
